@@ -1,9 +1,9 @@
 TARGET=main
-SOURCES=simple_neural_network.c
-OBJECTS=simple_neural_network.o
+SOURCES=simple_neural_network.c main.c
+OBJECTS=simple_neural_network.o main.o
 
 build: objects
-	gcc -Wall -Wextra -std=c11 $(OBJECTS) main.c -o main
+	gcc -Wall -Wextra -std=c11 $(OBJECTS) -o main
 
 objects:
-	gcc -Wall -Wextra -std=c11 -c $(SOURCES) -o $(OBJECTS)
+	gcc -Wall -Wextra -std=c11 -c $(SOURCES)
