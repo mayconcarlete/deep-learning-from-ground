@@ -2,6 +2,6 @@
 #ifndef SIMPLE_NEURAL_NETWORK_H
 #define SIMPLE_NEURAL_NETWORK_H
 
-double single_in_single_out(double input, double weight);
+void simple_in_simple_out(double *inputs, int lenght, double weight);
 
 #endif

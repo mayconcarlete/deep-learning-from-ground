@@ -5,13 +5,10 @@
 #include "simple_neural_network.h"
 
 int main(){
-    double temperature[] = { 10, 20, -30, 40 };
+    double temperatures[] = { 10, 20, -30, 100 };
     double weight = -2;
-    printf("Weight value: %.2f\n", weight);
-    for(size_t i = 0; i < 4; i++){
-        double output = single_in_single_out(temperature[i], weight);
-        printf("Input [%ld] value[%.2f] generated Output [%.2f]\n", i, temperature[i] , output);
-    }
+    
+    simple_in_simple_out(temperatures, sizeof(temperatures)/sizeof(double), weight);
     
     return 0;
 }
