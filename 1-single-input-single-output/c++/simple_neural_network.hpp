@@ -1,13 +1,14 @@
 #pragma once
 
 #include <cstdint>
+#include <vector>
 
 class SimpleInputSimpleOutput {
     public:
-        SimpleInputSimpleOutput(double m_input, double m_weight);
-        ~SimpleInputSimpleOutput() = default;
-        double perform();
+        SimpleInputSimpleOutput(const std::vector<double> inputs, const double weight);
+        ~SimpleInputSimpleOutput(void);
+        void perform(void);
     private:
-        double m_input;
-        double m_weight;
-}
+        const std::vector<double> m_inputs;
+        const double m_weight;
+};

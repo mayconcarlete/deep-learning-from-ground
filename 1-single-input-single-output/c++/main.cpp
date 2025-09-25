@@ -1,9 +1,14 @@
 #include <iostream>
-
+#include <vector>
+#include <memory>
+#include "simple_neural_network.hpp"
 
 int main(){
-
-    std::cout << "HEY from AI!!" << "\n";
+    std::vector<double> inputs = {10, 20, 30, 40};
+    double weight = 2.0;
+    auto simpleInputSimpleOutput = new SimpleInputSimpleOutput(inputs, weight);
+    simpleInputSimpleOutput->perform(); 
     
-    return EXIT_SUCESS;
+    delete simpleInputSimpleOutput;
+    return EXIT_SUCCESS;
 }
