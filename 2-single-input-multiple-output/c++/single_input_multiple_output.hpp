@@ -15,10 +15,11 @@ typedef struct {
 class SingleInputMultipleOutput {
     public:
         SingleInputMultipleOutput(double sad_input, Weigths *weigths);
-        ~SingleInputMultipleOutput(void);
-        perform(void);
-        print_result(void);
+        ~SingleInputMultipleOutput(void) = default;
+        void perform(void);
+        void print_result(void);
     private:
+        double m_sad_input;
+        Weigths *m_weigths;
         Predictions m_result;
-        Weigths m_weigths;
-}
+};
