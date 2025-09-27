@@ -3,10 +3,10 @@
 #include <cstdint>
 #include <vector>
 
-class SimpleInputSimpleOutput {
+class SingleInputSingleOutput {
     public:
-        SimpleInputSimpleOutput(const std::vector<double> inputs, const double weight);
-        ~SimpleInputSimpleOutput(void);
+        SingleInputSingleOutput(const std::vector<double> inputs, const double weight);
+        ~SingleInputSingleOutput(void);
         void perform(void);
     private:
         const std::vector<double> m_inputs;

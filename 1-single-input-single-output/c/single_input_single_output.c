@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-#include "simple_neural_network.h"
+#include "single_input_single_output.h"
 
-void simple_in_simple_out(double *inputs, int length, double weight){
+void single_input_single_output(double *inputs, int length, double weight){
     printf("Weight value: %.2f\n", weight);
     for(int i = 0; i < length; i++){
         double result = inputs[i] * weight;

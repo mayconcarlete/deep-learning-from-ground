@@ -1,14 +1,14 @@
 #include <iostream>
 #include <vector>
 #include <memory>
-#include "simple_neural_network.hpp"
+#include "single_input_single_output.hpp"
 
 int main(){
     std::vector<double> inputs = {10, 20, 30, 40};
     double weight = 2.0;
-    auto simpleInputSimpleOutput = new SimpleInputSimpleOutput(inputs, weight);
-    simpleInputSimpleOutput->perform(); 
+    auto singleInputSingleOutput = new SingleInputSingleOutput(inputs, weight);
+    singleInputSingleOutput->perform(); 
     
-    delete simpleInputSimpleOutput;
+    delete singleInputSingleOutput;
     return EXIT_SUCCESS;
 }

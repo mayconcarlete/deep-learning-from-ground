@@ -1,17 +1,17 @@
-#include "simple_neural_network.hpp"
+#include "single_input_single_output.hpp"
 #include <vector>
 #include <iostream>
 #include <iterator>
 #include <format>
 #include <string>
 
-SimpleInputSimpleOutput::SimpleInputSimpleOutput(const std::vector<double> inputs,const double weight):m_inputs(inputs),m_weight(weight){}
+SingleInputSingleOutput::SingleInputSingleOutput(const std::vector<double> inputs,const double weight):m_inputs(inputs),m_weight(weight){}
 
-SimpleInputSimpleOutput::~SimpleInputSimpleOutput(void){
-    std::cout << "Deleting Simple Input Simple Output class" << "\n";
+SingleInputSingleOutput::~SingleInputSingleOutput(void){
+    std::cout << "Deleting Single Input Single Output class" << "\n";
 }
 
-void SimpleInputSimpleOutput::perform(void){
+void SingleInputSingleOutput::perform(void){
     const auto weight_msg = std::format("Weight: {}", m_weight);
     std::cout << weight_msg << "\n";
     for(auto it = m_inputs.begin(); it != m_inputs.end(); ++it){
