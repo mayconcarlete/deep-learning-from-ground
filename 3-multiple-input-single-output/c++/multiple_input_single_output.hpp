@@ -1,16 +1,20 @@
 #pragma once
+#include <vector>
 
 typedef struct {
     double temperature;
     double humidity;
     double air_quality;
-} Input;
+} Weights;
 
 class MultipleInputSingleOutput {
     public:
-        MultipleInputSingleOutput(Input input);
+        MultipleInputSingleOutput(Weights weights);
         ~MultipleInputSingleOutput(void) = default;
-        void print_input(void);
+        void perform(const std::vector<double> input);
+        double weight_sum(const std::vector<double> input);
+        double get_output(void);
     private:
-        Input m_input;
+        Weights m_weights;
+        double m_sad_output;
 };
