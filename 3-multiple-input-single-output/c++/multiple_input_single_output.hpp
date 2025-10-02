@@ -11,8 +11,8 @@ class MultipleInputSingleOutput {
     public:
         MultipleInputSingleOutput(Weights weights);
         ~MultipleInputSingleOutput(void) = default;
-        void perform(const std::vector<double> input);
-        double weight_sum(const std::vector<double> input);
+        void perform(const Weights& input);
+        double weight_sum(const Weights& input);
         double get_output(void);
     private:
         Weights m_weights;

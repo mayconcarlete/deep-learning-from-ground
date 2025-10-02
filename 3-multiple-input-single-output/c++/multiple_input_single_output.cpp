@@ -10,16 +10,16 @@ double MultipleInputSingleOutput::get_output(void){
     return this->m_sad_output;
 }
 
-double MultipleInputSingleOutput::weight_sum(const std::vector<double> input){
+double MultipleInputSingleOutput::weight_sum(const Weights& input){
     m_sad_output = 0;
 
-    m_sad_output += input[0] * m_weights.temperature;
-    m_sad_output += input[1] * m_weights.humidity;
-    m_sad_output += input[2] * m_weights.air_quality;
+    m_sad_output += input.temperature * m_weights.temperature;
+    m_sad_output += input.humidity * m_weights.humidity;
+    m_sad_output += input.air_quality * m_weights.air_quality;
     
     return m_sad_output;
 }
 
-void MultipleInputSingleOutput::perform(const std::vector<double> input){
+void MultipleInputSingleOutput::perform(const Weights& input){
     this->weight_sum(input);
 }
